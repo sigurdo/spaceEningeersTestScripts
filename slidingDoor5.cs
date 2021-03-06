@@ -37,11 +37,11 @@ public void Main(string argument, UpdateType updateSource)
     counter++;
     switch (directionState) {
         case (DirectionState.None):
-            if (DoorInne.Open) {
+            if (DoorInne.Status == DoorStatus.Open) {
                 counter = 0;
                 directionState = DirectionState.Out;
             }
-            else if (DoorUte.Open) {
+            else if (DoorUte.Status == DoorStatus.Open) {
                 counter = 0;
                 directionState = DirectionState.In;
             }

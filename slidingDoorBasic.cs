@@ -39,7 +39,7 @@ public void Main(string argument, UpdateType updateSource)
     counter++;
     switch (state) {
         case (State.None):
-            if (Door.Open) {
+            if (Door.Status == DoorStatus.Open) {
                 counter = 0;
                 state = State.Counting;
             }
